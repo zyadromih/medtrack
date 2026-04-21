@@ -970,21 +970,36 @@ td {
         border-radius: 0 0 16px 16px;
     }
 
+    .sidebar-header {
+        justify-content: center;
+        padding: 15px;
+    }
+
     .nav-links {
         display: flex;
         overflow-x: auto;
         padding: 10px;
         flex-direction: row;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-links>li:not(.accordion-item) {
         flex: 0 0 auto;
         margin: 0 5px;
-        padding: 10px 15px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .nav-links>li i {
+        font-size: 1.1rem;
     }
 
     .accordion-item {
-        min-width: 250px;
+        min-width: 200px;
     }
 
     .main-content {
@@ -996,15 +1011,118 @@ td {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+        padding: 15px;
     }
 
     .user-info {
         flex-direction: column;
+        text-align: center;
     }
 
     .form-row {
         flex-direction: column;
-        gap: 0;
+        gap: 15px;
+    }
+
+    /* Center aligning mostly for mobile */
+    .landing-container {
+        text-align: center !important;
+    }
+
+    .landing-container .glass-card[style*="text-align: right"] {
+        text-align: center !important;
+    }
+
+    .landing-container>div[style*="text-align: right"] {
+        text-align: center !important;
+    }
+
+    /* Landing Page Specific Adjustments */
+    .flex-input {
+        flex-direction: column;
+        gap: 10px !important;
+    }
+
+    .flex-input .btn {
+        width: 100%;
+        padding: 12px !important;
+    }
+
+    .main-title {
+        font-size: 2.5rem !important;
+    }
+
+    p[style*="font-size: 1.25rem"] {
+        font-size: 1rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .pricing-card.glass-card {
+        padding: 25px 20px !important;
+    }
+
+    .pricing-card .card-icon {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .pricing-card .price {
+        font-size: 2.2rem;
+    }
+
+    .admin-gates {
+        flex-direction: column;
+        gap: 15px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .gate-card.glass-card {
+        padding: 20px 15px !important;
+        min-width: 100% !important;
+    }
+
+    .gate-card i {
+        font-size: 2.5rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .gate-card h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .gate-card p {
+        font-size: 0.9rem !important;
+        margin-top: 5px !important;
+    }
+
+    /* Reduce inline padding for panels on mobile */
+    .tab-pane .glass-card,
+    .landing-container .glass-card {
+        padding: 20px !important;
+    }
+
+    .modal-box {
+        padding: 20px !important;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .btn i {
+        font-size: 1rem;
     }
 }
 
